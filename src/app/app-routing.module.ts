@@ -6,10 +6,11 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'contact-list', component: ContactListComponent },
   { path: 'add-contact', component: CreateContactComponent },
-  { path: 'edit-contact/:id', component: EditContactComponent }
+  { path: 'edit-contact/:id', component: EditContactComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
